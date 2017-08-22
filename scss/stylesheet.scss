@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background: #FCFCFC;
+	color: #1a1a1a;
+	font-family: 'Roboto', sans-serif;
+}
+
+body,
+html {
+	height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Roboto Mono', sans-serif;
+	font-weight: bold;
+}
+
+img {
+	pointer-events: none;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	>div {
+		width: 50%;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+header {
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #1d1d1d;
+	color: #FFFFFF;
+	box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	h1 {
+		font-size: 14pt;
+		margin: 0;
+		padding: 0rem 0rem 0rem 2rem;
+		text-transform: uppercase;
+	}
+	.btn {
+		padding: 0rem 1rem;
+		background: #FCFCFC;
+		color: #1d1d1d;
+		text-align: center;
+		line-height: 60px;
+		font-family: 'Roboto Mono', sans-serif;
+	}
+	.btn:hover {
+		background: #FFFFFF;
+	}
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	padding: 1rem 1.5rem;
+	margin: .5rem 0rem;
+	i {
+		padding: 0rem .4rem 0rem 0rem;
+	}
+}
+
+.btn:hover {
+	background: rgba(0, 0, 0, 0.02);
+	border-radius: 2px;
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: 'liga';
+}
+
+section#header {
+	height: 100%;
+	min-height: 400px;
+	padding: 100px 2rem 0px 2rem;
+	background: #1d1d1d;
+	color: #FFFFFF;
+	div {
+		height: 100%;
+		position: relative;
+	}
+	div#thumbnail {
+		background: url('../img/header_bg.png');
+		background-repeat: no-repeat;
+		background-size: 50% auto;
+		/* make a "best guess" here as a default */
+		background-repeat: no-repeat;
+		background-position: center center;
+		position: fixed;
+		float: left;
+	}
+	div#description {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: left;
+		* {
+			width: 50%;
+		}
+		p {
+			font-family: 'Roboto Mono', sans-serif;
+			font-size: 18pt;
+		}
+	}
+}
+
+section {
+	padding: 1rem 4rem;
+	background: #FCFCFC;
+	position: relative;
+	h1 {
+		font-size: 24pt;
+	}
+	div.btn {
+		padding: 1rem 2rem;
+		font-size: 12pt;
+		border-radius: 2px;
+		border: none;
+		outline: none;
+		i {
+			padding: 0rem 1rem 0rem 0rem;
+		}
+	}
+	.card {
+		margin: 1rem;
+		padding: 3rem 2rem;
+		background: #FFFFFF;
+		box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+		p#user-description {
+			padding: 0rem 1rem;
+			font-size: 13pt;
+			color: #212121;
+			font-family: 'Roboto Mono', sans-serif;
+		}
+	}
+}
+
+footer {
+	padding: 1rem 4rem;
+	z-index: 2;
+	position: relative;
+	color: #757575;
+	background: #FCFCFC;
+	height: 50px;
+	#about {
+		text-align: left;
+	}
+	#social {
+		text-align: right;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	h1 {
+
+		text-align: center;
+	}
+	header {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		h1 {
+			width: 100%;
+			text-align: center;
+		}
+		div.btn {
+			display: none;
+		}
+	}
+	section#header {
+		background: url('../img/header_bg.png') #1d1d1d;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 50% auto;
+	}
+	.row {
+		flex-direction: column;
+		>div {
+			width: 100%;
+		}
+	}
+	.hidden-mobile {
+		display: none;
+	}
+	.btn {
+		text-align: center;
+		width: auto;
+		display: block;
+		margin: 0px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	section#header {
+		div#description * {
+			width: 100%;
+		}
+	}
+	section {
+		padding: 1rem;
+	}
+	footer {
+		div.row div {
+			padding: 1rem 0rem;
+		}
+	}
+}
